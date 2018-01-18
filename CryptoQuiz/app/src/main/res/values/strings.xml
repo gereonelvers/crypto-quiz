@@ -1,0 +1,148 @@
+<resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
+    <!--General Strings -->
+    <string name="app_name">CryptoQuiz</string>
+
+
+    <!--OpeningActivity Strings -->
+    <!--////////////////////////-->
+    <!--Stylized version of app name [15 char max]-->
+    <string name="title" translatable="false">CryptoQuiz</string>
+    <!--Short greeting String [6 char max]-->
+    <string name="intro1">Hello</string>
+    <!--button text String [one line, ~15 char max]-->
+    <string name="openingButton">Let\'s go!</string>
+    <!--hint in name EditText, directly dictates EditText's length [12 char max]-->
+    <string name="nameHint">name here</string>
+    <!--Intro phrase [30 char max]-->
+    <string name="intro2">ready to test your crypto-knowledge?</string>
+    <!-- Toast message to remind user of name input [55 char max]-->
+    <string name="nameMissing">Please input a name before starting the quiz!</string>
+
+    <!--Main menu Strings -->
+    <!--//////////////////-->
+    <!-- Add user option in Actionbar; will get pushed to dot-menu if too long [10 char max]-->
+    <string name="action1">Low resource mode</string>
+    <string name="action2">Help</string>
+    <string name="action3">Sources</string>
+    <string name="action4">Help/About</string>
+    <string name="action5">Change name</string>
+    <string name="startQuiz">Start Quiz</string>
+    <string name="startPractise">P\nr\na\nc\nt\ni\ns\ne</string>
+    <string name="startLearning">Learning Resources</string>
+    <string name="welcomeMessage">Hello <xliff:g id="name">%s</xliff:g>!</string>
+    <string name="test">Test</string>
+    <string name="title_activity_practise">PractiseActivity</string>
+    <string name="title_activity_learning_resources">LearningResourcesActivity</string>
+    <string name="nameVar" translatable="false">a</string>
+
+    <!-- Help/About Strings -->
+    <!-- ////////////////// -->
+    <string name="help_header">Help</string>
+    <string name="help_text">Do you have an issue with the App? Is a feature missing? Or have you spotted a nasty bug?\nJust reach out and send me an email! The address is</string>
+    <string name="email" translatable="false">gereonelvers99@gmail.com</string>
+    <string name="about_header">About</string>
+    <string name="about_text">CryptoQuiz was made with 	&lt;/3 by Gereon Elvers for the\nUdacity Google Android Basics Developer Scholarship Challenge. Check out my GitHub at</string>
+
+
+    <!-- Sources Strings -->
+    <!-- ////////////////// -->
+    <string name="sources_header">Sources</string>
+    <string name="sources_text">Below you can find sources to all media used inside the App</string>
+    <string name="fair_use_disclaimer">All media is used under Section 107 of the Copyright Act 1976:\nCopyright Disclaimer Under Section 107 of the Copyright Act 1976, allowance is made for "fair use" for purposes such as criticism, comment, news reporting, teaching, scholarship, and research. Fair use is a use permitted by copyright statute that might otherwise be infringing. Non-profit, educational or personal use tips the balance in favor of fair use.</string>
+    <string name="media1">Crypto currency logo by Daniel Pfeifer</string>
+    <string name="media2" translatable="false">Technology Network Loop Background by ConnectingConnections</string>
+    <string name="media3" translatable="false">Guy Fawkes mask by amazyble.com</string>
+    <string name="media4" translatable="false">Smart contracts by blockgeeks.com</string>
+    <string name="media5">Digibyte logo from coinmarketcap.com</string>
+    <string name="media6" translatable="false">SegWit logo from cryptocompare.com</string>
+    <string name="media7">Bitcoin wallet symbol by buybitcoinworldwide.com</string>
+    <string name="media8">Charlie Lee photo from his twitter</string>
+    <string name="media9">Andreas Antonopoulos photo from antonopoulos.com</string>
+    <string name="media10">Blockchain symbol by ablogaboutnothinginparticular.com</string>
+    <string name="media11">Altcoin picture by bitcoin.com</string>
+    <string name="media12" translatable="false">Lightning Network schematic by bitcoinmagazine.com</string>
+    <string name="media13">Bitcoin roller coaster down by bitcoinrollercoaster.com</string>
+    <string name="media14">Bitcoin roller coaster up and down by brainlesstale.com</string>
+    <string name="media15">Bitcoin roller coaster up by brainlesstales.com</string>
+    <string name="media16">Bitcoin roller coaster up fast by brainlesstale.com</string>
+    <string name="back">back</string>
+
+    <!-- Practise Strings (reused in main quiz) -->
+    <!-- ////////////////////////////////////////////// -->
+    <string name="question1">Question 1</string>
+    <string name="question2">Question 2</string>
+    <string name="question3">Question 3</string>
+    <string name="question4">Question 4</string>
+    <string name="question5">Question 5</string>
+    <string name="question6">Question 6</string>
+    <string name="question7">Question 7</string>
+    <string name="question8">Question 8</string>
+    <string name="question9">Question 9</string>
+    <string name="question10">Question 10</string>
+    <string name="practise_toolbar_title">Practise</string>
+
+    <!-- Question Strings (Used in the questions. A lot of strings, but you should have a fair amount of freedom when translating. Most answers won't need to be translated) -->
+    <!-- ////////////////// -->
+    <string name="nextButton">Next</string>
+    <string name="question1Ask">What is the full name used by the original Bitcoin creator?</string>
+    <string name="answerHint">Input answer here</string>
+
+    <string name="question2Ask">Which cryptocurrency first introduced smart contracts?</string>
+    <string name="q2a1" translatable="false">Bitcoin</string>
+    <string name="q2a2" translatable="false">Ripple</string>
+    <string name="q2a3" translatable="false">Litecoin</string>
+    <string name="q2a4" translatable="false">Ethereum</string>
+
+    <string name="question3Ask">Which crypto does this Icon belong to?</string>
+    <string name="q3a1" translatable="false">Dash</string>
+    <string name="q3a2" translatable="false">Digibyte</string>
+    <string name="q3a3" translatable="false">Decred</string>
+    <string name="q3a4" translatable="false">Dent</string>
+
+    <string name="question4Ask">What is the name of the Bitcoin Softfork implemented on August 24, 2017?</string>
+
+    <string name="question5Ask">Which of the following store your Bitcoin securely?</string>
+    <string name="q5a1" translatable="false">Coinbase</string>
+    <string name="q5a2" translatable="false">TREZOR</string>
+    <string name="q5a3" translatable="false">JAXX</string>
+    <string name="q5a4" translatable="false">Ledger Nano S</string>
+
+    <string name="question6Ask">Who is Charlie Lee?</string>
+    <string name="q6a1" translatable="false">CEO of Coinbase</string>
+    <string name="q6a2">Owner of Kraken</string>
+    <string name="q6a3">Founder of Litecoin</string>
+    <string name="q6a4">Owner of MtGox</string>
+
+    <string name="question7Ask">Who is this?</string>
+    <string name="q7a1" translatable="false">Roger Ver</string>
+    <string name="q7a2" translatable="false">Andreas Antonopoulos</string>
+    <string name="q7a3" translatable="false">Vitalik Buterin</string>
+    <string name="q7a4">Brian Armstrong</string>
+
+    <string name="question8Ask">What is the name of the general distributed ledger that tracks all transactions of a cryptocurrency?</string>
+
+    <string name="question9Ask">Which of the following are real altcoins?</string>
+    <string name="q9a1" translatable="false">Offerings to Cthulu</string>
+    <string name="q9a4" translatable="false">HoboNickles</string>
+    <string name="q9a3" translatable="false">MangoCoinz</string>
+    <string name="q9a2" translatable="false">Coinye (originally Coinye West)</string>
+
+    <string name="question10Ask">Which 2nd layer solution recently launched on the Bitcoin mainnet? (Hint: TorGuard!)</string>
+
+    <!-- End screen Strings -->
+    <string name="congrats">Congratulations, <xliff:g id="name">%s</xliff:g>!</string>
+    <string name="score">You achieved <xliff:g id="score">%s</xliff:g> out of 16 points!</string>
+    <string name="practise">Practise</string>
+
+    <!-- Learning Resources-->
+    <string name="resources_header">Learning Resources</string>
+    <string name="resources_text">Below you can find links for you to learn more.</string>
+    <string name="resource1" translatable="false">reddit.com/r/bitcoin</string>
+    <string name="resource2" translatable="false">coinmarketcap.com</string>
+    <string name="resource3" translatable="false">bitcoin.org</string>
+    <string name="resource4" translatable="false">reddit.com/r/CryptoCurrency</string>
+    <string name="resource5" translatable="false">lightning.network</string>
+    <string name="title_activity_opening_rotated">OpeningActivityRotated</string>
+
+
+</resources>

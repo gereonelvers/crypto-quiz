@@ -1,0 +1,106 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:fillViewport="true">
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:paddingBottom="40dp">
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/resources_header"
+                android:id="@+id/sourcesHeader"
+                android:textColor="@android:color/black"
+                android:textSize="40sp"
+                android:layout_centerHorizontal="true"
+                android:padding="8dp"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/resources_text"
+                android:id="@+id/sourcesText"
+                android:textColor="@android:color/black"
+                android:textSize="16sp"
+                android:layout_gravity="center"
+                android:layout_below="@id/sourcesHeader"
+                android:padding="8dp"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/resource1"
+                android:id="@+id/media1"
+                android:textColor="@android:color/black"
+                android:textSize="16sp"
+                android:layout_below="@id/sourcesText"
+                android:padding="8dp"
+                android:onClick="media1"
+                android:textStyle="bold"/>
+
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/resource2"
+                android:id="@+id/media2"
+                android:textColor="@android:color/black"
+                android:textSize="16sp"
+                android:layout_below="@id/media1"
+                android:padding="8dp"
+                android:onClick="media2"
+                android:textStyle="bold"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/resource3"
+                android:id="@+id/media3"
+                android:textColor="@android:color/black"
+                android:textSize="16sp"
+                android:layout_below="@id/media2"
+                android:padding="8dp"
+                android:onClick="media3"
+                android:textStyle="bold"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/resource4"
+                android:id="@+id/media4"
+                android:textColor="@android:color/black"
+                android:textSize="16sp"
+                android:layout_below="@id/media3"
+                android:padding="8dp"
+                android:onClick="media4"
+                android:textStyle="bold"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/resource5"
+                android:id="@+id/media5"
+                android:textColor="@android:color/black"
+                android:textSize="16sp"
+                android:layout_below="@id/media4"
+                android:padding="8dp"
+                android:onClick="media5"
+                android:textStyle="bold"/>
+        </RelativeLayout>
+    </ScrollView>
+
+
+    <Button
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:text="@string/back"
+        android:onClick="returnMainMenu"
+        android:background="#408e8e8e"/>
+</RelativeLayout>

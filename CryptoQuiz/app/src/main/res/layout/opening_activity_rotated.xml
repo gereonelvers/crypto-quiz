@@ -1,0 +1,112 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <VideoView
+        android:id="@+id/backgroundVideo"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentLeft="true"
+        android:background="@android:color/transparent" />
+
+
+    <ScrollView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content">
+        <RelativeLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content">
+            <!--<ImageView-->
+            <!--android:id="@+id/logo"-->
+            <!--android:layout_width="match_parent"-->
+            <!--android:layout_height="wrap_content"-->
+            <!--android:layout_marginRight="80dp"-->
+            <!--android:layout_marginLeft="80dp"-->
+            <!--android:layout_marginTop="-50dp"-->
+            <!--android:layout_centerHorizontal="true"-->
+            <!--android:src="@drawable/logo1" />-->
+            <RelativeLayout
+                android:layout_below="@id/logo"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+                <TextView
+                    android:id="@+id/intro1"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="32sp"
+                    android:layout_marginLeft="24dp"
+                    android:textSize="40sp"
+                    android:text="@string/intro1"
+                    android:textColor="@android:color/black" />
+
+                <EditText
+                    android:id="@+id/nameInput"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_toRightOf="@id/intro1"
+                    android:layout_marginTop="21sp"
+                    android:layout_marginLeft="8dp"
+                    android:textSize="40sp"
+                    android:hint="@string/nameHint"
+                    android:singleLine="true"/>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_toRightOf="@id/nameInput"
+                    android:layout_marginTop="32sp"
+                    android:textSize="40sp"
+                    android:text=","
+                    android:textColor="@android:color/black"/>
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/intro1"
+                    android:text="@string/intro2"
+                    android:textSize="30sp"
+                    android:layout_marginLeft="24dp"
+                    android:layout_marginTop="8dp"
+                    android:textColor="@android:color/black"
+                    />
+            </RelativeLayout>
+
+        </RelativeLayout>
+    </ScrollView>
+    <!--<TextView-->
+    <!--android:layout_width="match_parent"-->
+    <!--android:layout_height="wrap_content"-->
+    <!--android:id="@+id/openingButton"-->
+    <!--android:layout_alignParentBottom="true"-->
+    <!--android:text="@string/openingButton"-->
+    <!--android:onClick="startQuiz"-->
+    <!--android:textSize="20sp"-->
+    <!--android:padding="16sp"-->
+    <!--android:background="@android:color/transparent"/>-->
+    <Button
+        android:id="@+id/openingButton"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:text="@string/openingButton"
+        android:padding="16dp"
+        android:textSize="20sp"
+        android:textColor="#000000"
+        android:background="@android:color/transparent"
+        android:onClick="startMainMenu"
+        />
+
+    <View
+        android:layout_margin="5dp"
+        android:layout_width="match_parent"
+        android:layout_height="2sp"
+        android:background="#000000"
+        android:layout_above="@id/openingButton"
+        android:id="@+id/line"
+        ></View>
+
+</RelativeLayout>

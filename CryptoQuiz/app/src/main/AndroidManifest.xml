@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.example.android.cryptoquiz">
+
+    <application
+        android:allowBackup="true"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:largeHeap="true"
+        android:roundIcon="@mipmap/ic_launcher_round"
+        android:supportsRtl="true"
+        android:theme="@style/AppTheme">
+        <activity android:name=".OpeningActivity"
+            android:configChanges="orientation|screenSize">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity android:name=".MainActivity"
+            android:configChanges="orientation|screenSize"/>
+        <activity android:name=".SourcesActivity" />
+        <activity android:name=".HelpActivity" />
+        <activity android:name=".QuizActivity" />
+        <activity
+            android:name=".PractiseActivity"
+            android:label="@string/title_activity_practise"
+            android:theme="@style/AppTheme" />
+        <activity
+            android:name=".LearningResourcesActivity"
+            android:label="@string/title_activity_learning_resources"
+            android:theme="@style/AppTheme" />
+        <activity android:name=".question1" />
+        <activity android:name=".question2" />
+        <activity android:name=".question3" />
+        <activity android:name=".question4" />
+        <activity android:name=".question5" />
+        <activity android:name=".question6" />
+        <activity android:name=".question7" />
+        <activity android:name=".question8" />
+        <activity android:name=".question9" />
+        <activity android:name=".question10" />
+    </application>
+
+</manifest>

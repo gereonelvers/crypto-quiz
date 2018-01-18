@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<RelativeLayout android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/about_header"
+        android:id="@+id/aboutHeader"
+        android:textColor="@android:color/black"
+        android:textSize="40sp"
+        android:layout_centerHorizontal="true"
+        android:padding="8dp"/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/about_text"
+        android:id="@+id/aboutText"
+        android:textColor="@android:color/black"
+        android:textSize="16sp"
+        android:layout_gravity="center"
+        android:layout_below="@id/aboutHeader"
+        android:padding="8dp"/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="https://github.com/gereonelvers"
+        android:id="@+id/github"
+        android:textColor="@android:color/black"
+        android:textSize="16sp"
+        android:layout_below="@id/aboutText"
+        android:padding="8dp"
+        android:onClick="openGithub"/>
+
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/help_header"
+        android:id="@+id/helpHeader"
+        android:textColor="@android:color/black"
+        android:textSize="40sp"
+        android:layout_centerHorizontal="true"
+        android:layout_below="@id/github"
+        android:padding="8dp"/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/help_text"
+        android:id="@+id/helpText"
+        android:textColor="@android:color/black"
+        android:textSize="16sp"
+        android:layout_gravity="center"
+        android:layout_below="@id/helpHeader"
+        android:padding="8dp"/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/email"
+        android:id="@+id/email"
+        android:textColor="@android:color/black"
+        android:textSize="16sp"
+        android:layout_gravity="center"
+        android:layout_below="@id/helpText"
+        android:padding="8dp"
+        android:onClick="sendMail"/>
+
+    <Button
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:text="@string/back"
+        android:onClick="returnMainMenu"/>
+</RelativeLayout>
