@@ -19,14 +19,18 @@ public class QuizActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_quiz);
+        // Get score and name
         int score = getIntent().getIntExtra("score", 0);
         SharedPreferences pref = getApplicationContext().getSharedPreferences("MyPref", MODE_PRIVATE);
         String name = pref.getString("name", "");
+        // Set score and name into TextViews
         TextView congrats = findViewById(R.id.congrats);
         congrats.setText(getString(R.string.congrats, name));
         TextView scoreView = findViewById(R.id.score);
         scoreView.setText(getString(R.string.score, score));
         final VideoView videoview = findViewById(R.id.video);
+
+        // Dynamic VideoView background based on the score the user achieved
         if(score <= 5){
         Uri uri = Uri.parse("android.resource://"+getPackageName()+"/"+R.raw.rcdownvid);
         videoview.setVideoURI(uri);}
@@ -51,6 +55,7 @@ public class QuizActivity extends AppCompatActivity {
         videoview.start();
     }
 
+    // Custom Back button behaviour to make the questions inaccessible, so the user can't go back and change answers
     @Override
     public boolean onKeyUp(int keyCode, KeyEvent event){
         if (keyCode == KeyEvent.KEYCODE_BACK){

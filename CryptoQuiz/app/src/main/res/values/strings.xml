@@ -29,7 +29,7 @@
     <string name="startQuiz">Start Quiz</string>
     <string name="startPractise">P\nr\na\nc\nt\ni\ns\ne</string>
     <string name="startLearning">Learning Resources</string>
-    <string name="welcomeMessage">Hello <xliff:g id="name">%s</xliff:g>!</string>
+    <string name="welcomeMessage">Hello <xliff:g id="name" example="Thomas">%s</xliff:g>!</string>
     <string name="test">Test</string>
     <string name="title_activity_practise">PractiseActivity</string>
     <string name="title_activity_learning_resources">LearningResourcesActivity</string>
@@ -130,8 +130,8 @@
     <string name="question10Ask">Which 2nd layer solution recently launched on the Bitcoin mainnet? (Hint: TorGuard!)</string>
 
     <!-- End screen Strings -->
-    <string name="congrats">Congratulations, <xliff:g id="name">%s</xliff:g>!</string>
-    <string name="score">You achieved <xliff:g id="score">%s</xliff:g> out of 16 points!</string>
+    <string name="congrats">Congratulations, <xliff:g id="name" example="Thomas">%s</xliff:g>!</string>
+    <string name="score">You achieved <xliff:g id="score" example="0">%s</xliff:g> out of 16 points!</string>
     <string name="practise">Practise</string>
 
     <!-- Learning Resources-->

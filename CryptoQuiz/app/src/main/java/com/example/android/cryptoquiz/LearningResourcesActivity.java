@@ -10,10 +10,6 @@ import android.widget.TextView;
 public class LearningResourcesActivity extends AppCompatActivity {
 
     // this activity will function as the "Sources" section of the app.
-    // Sources that still need to be included:
-    // - Video Background
-    // - Crypto logo
-    // Fair use disclaimer
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);

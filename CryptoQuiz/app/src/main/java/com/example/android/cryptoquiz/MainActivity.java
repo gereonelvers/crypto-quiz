@@ -1,29 +1,24 @@
 package com.example.android.cryptoquiz;
 
-import android.app.Activity;
-import android.content.Context;
 import android.content.Intent;
 import android.content.SharedPreferences;
-import android.content.pm.ActivityInfo;
 import android.content.res.Configuration;
 import android.media.MediaPlayer;
 import android.net.Uri;
-import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.support.v7.app.AppCompatActivity;
+import android.support.v7.widget.Toolbar;
 import android.view.KeyEvent;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
 import android.widget.TextView;
-import android.widget.Toast;
 import android.widget.VideoView;
-import android.support.v7.widget.Toolbar;
 
 
 public class MainActivity extends AppCompatActivity {
     //This activity functions as the Apps main menu, giving the user access to the question quiz process, the options/help dialog and additional learning resources
 
-    Boolean playingVideo = true;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -45,12 +40,7 @@ public class MainActivity extends AppCompatActivity {
         SharedPreferences pref = getApplicationContext().getSharedPreferences("MyPref", MODE_PRIVATE);
         String name = pref.getString("name", "there");
         welcomeMessage.setText(getString(R.string.welcomeMessage, name));
-        if (savedInstanceState != null) {
-            playingVideo = savedInstanceState.getBoolean("playingVideo");}
-        if (playingVideo){
-            videoview.start();
-            }
-        }
+    }
 
 
     @Override
@@ -65,26 +55,17 @@ public class MainActivity extends AppCompatActivity {
                 videoview.start();
             }
         });
-        if (playingVideo){
-            videoview.start();
-        }
-        else {videoview.pause();}
     }
 
     @Override
     public boolean onKeyUp(int keyCode, KeyEvent event){
         if (keyCode == KeyEvent.KEYCODE_BACK) {
-                Intent a = new Intent(Intent.ACTION_MAIN);
-                a.addCategory(Intent.CATEGORY_HOME);
-                a.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
-                startActivity(a);
+            Intent a = new Intent(Intent.ACTION_MAIN);
+            a.addCategory(Intent.CATEGORY_HOME);
+            a.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
+            startActivity(a);
         }
         return true;
-    }
-
-    public void onSaveInstanceState(Bundle savedInstanceState) {
-        super.onSaveInstanceState(savedInstanceState);
-        savedInstanceState.putBoolean("playingVideo", playingVideo);
     }
 
 
@@ -99,22 +80,6 @@ public class MainActivity extends AppCompatActivity {
     public boolean onOptionsItemSelected(MenuItem item) {
         int id = item.getItemId();
 
-        // Enables low resource mode (currently just disables video)
-//        if (id == R.id.lowEnergyMode) {
-//            VideoView videoView = findViewById(R.id.backgroundVideo);
-//            if (videoView.isPlaying()){
-//                Toast.makeText(MainActivity.this, "Video background paused to save resources", Toast.LENGTH_SHORT).show();
-//                videoView.pause();
-//                playingVideo = false;}
-//
-//            else {
-//                videoView.start();
-//                Toast.makeText(MainActivity.this, "Video background playback restarted", Toast.LENGTH_LONG).show();
-//                playingVideo = true;}
-//            return true;
-//        }
-
-
         // Opens sources activity (Links to images etc.)
         if (id == R.id.sources){
             Intent intent = new Intent(getApplicationContext(), SourcesActivity.class);
@@ -124,6 +89,7 @@ public class MainActivity extends AppCompatActivity {
             return true;
         }
 
+        // Help/About Activity
         if (id == R.id.help_about){
             Intent intent = new Intent(getApplicationContext(), HelpActivity.class);
             String nameString = getIntent().getStringExtra("name");
@@ -132,6 +98,7 @@ public class MainActivity extends AppCompatActivity {
             return true;
         }
 
+        //Change name (Opens Opening_Activity
         if (id == R.id.change_name){
             Intent intent = new Intent(getApplicationContext(), OpeningActivity.class);
             SharedPreferences pref = getApplicationContext().getSharedPreferences("MyPref", MODE_PRIVATE);
@@ -145,6 +112,7 @@ public class MainActivity extends AppCompatActivity {
         return super.onOptionsItemSelected(item);
     }
 
+    // Change layout based on screen rotation
     public void onConfigurationChanged(Configuration newConfig){
         super.onConfigurationChanged(newConfig);
         if (newConfig.orientation == Configuration.ORIENTATION_LANDSCAPE) {

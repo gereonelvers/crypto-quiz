@@ -46,7 +46,7 @@
     <string name="welcomeMessage">Hallo <xliff:g id="name">%s</xliff:g>!</string>
     <string name="intro1">Hallo</string>
     <string name="q6a3">Litecoin Gründer</string>
-    <string name="help_text">Hast du ein Problem mit der App? Einen nervigen Bug gefunden? Schick mir einfach eine Email! Die Addresse ist</string>
+    <string name="help_text">Hast du ein Problem mit der App? Einen nervigen Bug gefunden? Schick mir einfach eine Email! Die Adresse ist</string>
     <string name="media5">Digibytelogo von coinmarketcap.com</string>
     <string name="about_text">CryptoQuiz wurde mit &lt;/3 von Gereon Elvers für die Udacity Google Android Basics Developer Scholarship Challenge erstellt. Besuche mein GitHub:</string>
     <string name="media1">Cryptowährungslogo von Daniel Pfeiffer</string>

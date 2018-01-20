@@ -12,7 +12,7 @@ import android.view.View;
 
 public class PractiseActivity extends AppCompatActivity {
 
-    // this activity serves as the "Learning resources" section of the app. It will include information and links to resources, encouraging the user to learn more
+    // This activity serves as the "Learning resources" section of the app. It will include information and links to resources, encouraging the user to learn more
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -25,7 +25,6 @@ public class PractiseActivity extends AppCompatActivity {
 
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {
-        // Inflate the menu; this adds items to the action bar if it is present.
         getMenuInflater().inflate(R.menu.testmenu, menu);
         return true;
     }
@@ -125,23 +124,6 @@ public void question1(View v){
     public boolean onOptionsItemSelected(MenuItem item) {
         int id = item.getItemId();
 
-        // Enables low resource mode (currently just disables video)
-//        if (id == R.id.lowEnergyMode) {
-//            VideoView videoView = findViewById(R.id.backgroundVideo);
-//            if (videoView.isPlaying()){
-//                Toast.makeText(MainActivity.this, "Video background paused to save resources", Toast.LENGTH_SHORT).show();
-//                videoView.pause();
-//                playingVideo = false;}
-//
-//            else {
-//                videoView.start();
-//                Toast.makeText(MainActivity.this, "Video background playback restarted", Toast.LENGTH_LONG).show();
-//                playingVideo = true;}
-//            return true;
-//        }
-
-
-        // Opens sources activity (Links to images etc.)
         if (id == R.id.sources){
             Intent intent = new Intent(getApplicationContext(), SourcesActivity.class);
             String nameString = getIntent().getStringExtra("name");

@@ -11,7 +11,7 @@ import android.widget.TextView;
 
 public class HelpActivity extends AppCompatActivity {
 
-    // this activity serves as the "help/about" section of the app. It will include info about me as well as a support email. Layout is left minimal for best performance (might be beautified in a different commit)
+    // This activity serves as the "help/about" section of the app. It will include info about me as well as a support email
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
