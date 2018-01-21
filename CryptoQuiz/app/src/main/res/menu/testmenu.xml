@@ -1,22 +1,19 @@
 <?xml version="1.0" encoding="utf-8"?>
 <menu xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/tools">
-    <!--<item-->
-        <!--android:id="@+id/lowEnergyMode"-->
-        <!--android:title="@string/action1"-->
-        <!--app:showAsAction="ifRoom"-->
-        <!--android:icon="@drawable/powericon"/>-->
+
     <item android:id="@+id/change_name"
         android:title="@string/action5"
+        android:icon="@drawable/nameicon"
         app:showAsAction="ifRoom"/>
 
-
-    <!-- should always be in the overflow -->
     <item android:id="@+id/sources"
         android:title="@string/action3"
-        app:showAsAction="never"/>
+        android:icon="@drawable/sourceicon"
+        app:showAsAction="ifRoom"/>
 
     <item android:id="@+id/help_about"
         android:title="@string/action4"
-        app:showAsAction="never"/>
+        app:showAsAction="ifRoom"
+        android:icon="@drawable/helpicon"/>
 </menu>

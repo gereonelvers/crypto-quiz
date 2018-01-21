@@ -24,10 +24,6 @@
         <activity android:name=".HelpActivity" />
         <activity android:name=".QuizActivity" />
         <activity
-            android:name=".PractiseActivity"
-            android:label="@string/title_activity_practise"
-            android:theme="@style/AppTheme" />
-        <activity
             android:name=".LearningResourcesActivity"
             android:label="@string/title_activity_learning_resources"
             android:theme="@style/AppTheme" />
@@ -41,6 +37,10 @@
         <activity android:name=".question8" />
         <activity android:name=".question9" />
         <activity android:name=".question10" />
+
+        <meta-data
+            android:name="preloaded_fonts"
+            android:resource="@array/preloaded_fonts" />
     </application>
 
 </manifest>

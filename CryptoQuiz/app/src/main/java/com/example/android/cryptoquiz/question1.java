@@ -10,41 +10,39 @@ import android.widget.EditText;
 
 public class question1 extends AppCompatActivity {
 
+    boolean hasAnswered = false;
+    String answerInput;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         overridePendingTransition(R.anim.fadein, R.anim.fadeout);
         setContentView(R.layout.activity_question1);
-        Boolean practiseMode = getIntent().getBooleanExtra("practise", false);
-        if (practiseMode) {
+    }
+
+    public void nextQuestion(View v) {
+        if (!hasAnswered) {
             EditText answer = findViewById(R.id.answerInput);
+            answerInput = answer.getText().toString();
             answer.setText("Satoshi Nakamoto");
             answer.setEnabled(false);
             answer.setFocusable(false);
             getWindow().setSoftInputMode(WindowManager.LayoutParams.SOFT_INPUT_STATE_ALWAYS_HIDDEN);
             answer.setTextColor(getResources().getColor(R.color.correctAnswer));
             Button nextButton = findViewById(R.id.nextButton);
-            nextButton.setText(R.string.back);
-        }
-    }
-
-    public void nextQuestion(View v) {
-        Boolean practiseMode = getIntent().getBooleanExtra("practise", false);
-        if (!practiseMode) {
-            Intent intent = new Intent(getApplicationContext(), question2.class);
-            int score = scoreCalc();
-            intent.putExtra("score", score);
-            startActivity(intent);
+            nextButton.setText(R.string.nextButton);
+            hasAnswered = true;
         } else {
-            Intent intent = new Intent(getApplicationContext(), PractiseActivity.class);
+            int score = scoreCalc();
+            Intent intent = new Intent(getApplicationContext(), question2.class);
+            intent.putExtra("score", score);
             startActivity(intent);
         }
     }
 
     public int scoreCalc() {
         int score = 0;
-        EditText answer = findViewById(R.id.answerInput);
-        String answerString = answer.getText().toString().toLowerCase();
+        String answerString = answerInput.toLowerCase();
         if (answerString.contains("satoshi nakamoto")) {
             score = score + 2;
         } else if (answerString.contains("satoshi")) {

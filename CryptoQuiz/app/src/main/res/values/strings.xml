@@ -82,7 +82,8 @@
     <string name="practise_toolbar_title">Practise</string>
 
     <!-- Question Strings (Used in the questions. A lot of strings, but you should have a fair amount of freedom when translating. Most answers won't need to be translated) -->
-    <!-- ////////////////// -->
+    <!-- /////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////// -->
+    <string name="answerButton">Submit answer</string>
     <string name="nextButton">Next</string>
     <string name="question1Ask">What is the full name used by the original Bitcoin creator?</string>
     <string name="answerHint">Input answer here</string>
@@ -130,9 +131,12 @@
     <string name="question10Ask">Which 2nd layer solution recently launched on the Bitcoin mainnet? (Hint: TorGuard!)</string>
 
     <!-- End screen Strings -->
-    <string name="congrats">Congratulations, <xliff:g id="name" example="Thomas">%s</xliff:g>!</string>
+    <string name="congrats">Congratulations, \n<xliff:g id="name" example="Thomas">%s</xliff:g>!</string>
+    <string name="badScore">Better luck next time, \n<xliff:g id="name" example="Thomas">%s</xliff:g>!</string>
     <string name="score">You achieved <xliff:g id="score" example="0">%s</xliff:g> out of 16 points!</string>
-    <string name="practise">Practise</string>
+    <string name="practise">Practice</string>
+    <string name="shareText">Hey!\n I just scored <xliff:g id="score" example="0">%s</xliff:g> points in CryptoQuiz! Download now from <a href="https://github.com/gereonelvers/crypto-quiz">GitHub</a> runter!  https://github.com/gereonelvers/crypto-quiz</string>
+    <string name="shareTitle">Share your results!</string>
 
     <!-- Learning Resources-->
     <string name="resources_header">Learning Resources</string>

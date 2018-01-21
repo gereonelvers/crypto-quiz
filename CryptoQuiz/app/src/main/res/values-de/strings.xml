@@ -37,7 +37,7 @@
     <string name="action1">Energiesparmodus</string>
     <string name="openingButton">Los gehts!</string>
     <string name="title_activity_learning_resources">Resourcenaktivität</string>
-    <string name="startLearning">Übungsresourcen</string>
+    <string name="startLearning">Übungen</string>
     <string name="resources_header">Übungsresourcen</string>
     <string name="answerHint">Antwort hier eintragen</string>
     <string name="action4">Hilfe/Impressum</string>
@@ -67,4 +67,7 @@
     <string name="media11">Altcoin picture von bitcoin.com</string>
     <string name="about_header">Über</string>
     <string name="practise">Üben</string>
+    <string name="shareText">Hey!\nIch habe grade <xliff:g id="score" example="0">%s</xliff:g> Punkte in CryptoQuiz erreicht! Lade es dir jetzt von <a href="https://github.com/gereonelvers/crypto-quiz">GitHub</a> runter! \nhttps://github.com/gereonelvers/crypto-quiz</string>
+    <string name="badScore">Mehr Glück beim nächsten Mal, \n<xliff:g id="name" example="Thomas">%s</xliff:g>!</string>
+    <string name="shareTitle">Teile dein Ergebnis!</string>
 </resources>

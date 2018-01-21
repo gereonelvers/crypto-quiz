@@ -1,5 +1,4 @@
 <?xml version="1.0" encoding="utf-8"?>
-
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
@@ -11,9 +10,8 @@
         android:layout_alignParentBottom="true"
         android:layout_alignParentLeft="true"
         android:layout_alignParentRight="true"
-        android:layout_alignParentTop="true"
-        />
-    <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        android:layout_alignParentTop="true" />
+    <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:orientation="vertical">
@@ -28,8 +26,6 @@
 
 
         <ScrollView
-            xmlns:android="http://schemas.android.com/apk/res/android"
-            xmlns:tools="http://schemas.android.com/tools"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:fillViewport="true">
@@ -44,7 +40,8 @@
                     android:layout_weight="1"
                     android:text="@string/welcomeMessage"
                     android:textColor="@android:color/black"
-                    android:textSize="50sp"/>
+                    android:textSize="50sp"
+                    android:gravity="center_vertical"/>
                 <LinearLayout
                     android:id="@+id/quizAction1"
                     android:layout_width="match_parent"
@@ -71,7 +68,7 @@
                         android:id="@+id/practiseTextView"
                         android:layout_width="wrap_content"
                         android:layout_height="match_parent"
-                        android:layout_marginBottom="8dp"
+                        android:layout_marginBottom="16dp"
                         android:layout_marginLeft="8dp"
                         android:layout_marginRight="16dp"
                         android:layout_marginTop="16dp"
@@ -79,26 +76,12 @@
                         android:background="#408e8e8e"
                         android:fontFamily="sans-serif-condensed"
                         android:gravity="center_horizontal|fill_vertical"
-                        android:onClick="startPractise"
+                        android:onClick="startLearningResources"
                         android:padding="6dp"
-                        android:text="@string/startPractise"
+                        android:text="@string/startLearning"
                         android:textColor="#000000"
-                        android:textSize="25sp"/>
+                        android:textSize="30sp"/>
                 </LinearLayout>
-                <TextView
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:layout_marginBottom="16dp"
-                    android:layout_marginLeft="16dp"
-                    android:layout_marginRight="16dp"
-                    android:layout_weight="2"
-                    android:background="#408e8e8e"
-                    android:gravity="center"
-                    android:onClick="startLearningResources"
-                    android:padding="8dp"
-                    android:text="@string/startLearning"
-                    android:textColor="#000000"
-                    android:textSize="40sp"/>
             </LinearLayout>
         </ScrollView>
 

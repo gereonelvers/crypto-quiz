@@ -19,16 +19,17 @@ import android.widget.VideoView;
 public class MainActivity extends AppCompatActivity {
     //This activity functions as the Apps main menu, giving the user access to the question quiz process, the options/help dialog and additional learning resources
 
+private Toolbar mTopToolbar;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         overridePendingTransition(R.anim.fadein, R.anim.fadeout);
         setContentView(R.layout.activity_main);
-        Toolbar myToolbar = findViewById(R.id.actionBar);
-        setSupportActionBar(myToolbar);
+        mTopToolbar = findViewById(R.id.actionBar);
+        setSupportActionBar(mTopToolbar);
         final VideoView videoview = findViewById(R.id.backgroundVideo);
-        Uri uri = Uri.parse("android.resource://"+getPackageName()+"/"+R.raw.testflipped);
+        Uri uri = Uri.parse("android.resource://" + getPackageName() + "/" + R.raw.testflipped);
         videoview.setVideoURI(uri);
         videoview.setOnCompletionListener(new MediaPlayer.OnCompletionListener() {
             @Override
@@ -40,15 +41,17 @@ public class MainActivity extends AppCompatActivity {
         SharedPreferences pref = getApplicationContext().getSharedPreferences("MyPref", MODE_PRIVATE);
         String name = pref.getString("name", "there");
         welcomeMessage.setText(getString(R.string.welcomeMessage, name));
+        videoview.start();
     }
 
 
     @Override
-    public void onResume(){
+    public void onResume() {
         super.onResume();
         final VideoView videoview = findViewById(R.id.backgroundVideo);
-        Uri uri = Uri.parse("android.resource://"+getPackageName()+"/"+R.raw.testflipped);
+        Uri uri = Uri.parse("android.resource://" + getPackageName() + "/" + R.raw.testflipped);
         videoview.setVideoURI(uri);
+        videoview.start();
         videoview.setOnCompletionListener(new MediaPlayer.OnCompletionListener() {
             @Override
             public void onCompletion(MediaPlayer mediaPlayer) {
@@ -58,7 +61,7 @@ public class MainActivity extends AppCompatActivity {
     }
 
     @Override
-    public boolean onKeyUp(int keyCode, KeyEvent event){
+    public boolean onKeyUp(int keyCode, KeyEvent event) {
         if (keyCode == KeyEvent.KEYCODE_BACK) {
             Intent a = new Intent(Intent.ACTION_MAIN);
             a.addCategory(Intent.CATEGORY_HOME);
@@ -81,7 +84,7 @@ public class MainActivity extends AppCompatActivity {
         int id = item.getItemId();
 
         // Opens sources activity (Links to images etc.)
-        if (id == R.id.sources){
+        if (id == R.id.sources) {
             Intent intent = new Intent(getApplicationContext(), SourcesActivity.class);
             String nameString = getIntent().getStringExtra("name");
             intent.putExtra("name", nameString);
@@ -90,7 +93,7 @@ public class MainActivity extends AppCompatActivity {
         }
 
         // Help/About Activity
-        if (id == R.id.help_about){
+        if (id == R.id.help_about) {
             Intent intent = new Intent(getApplicationContext(), HelpActivity.class);
             String nameString = getIntent().getStringExtra("name");
             intent.putExtra("name", nameString);
@@ -99,7 +102,7 @@ public class MainActivity extends AppCompatActivity {
         }
 
         //Change name (Opens Opening_Activity
-        if (id == R.id.change_name){
+        if (id == R.id.change_name) {
             Intent intent = new Intent(getApplicationContext(), OpeningActivity.class);
             SharedPreferences pref = getApplicationContext().getSharedPreferences("MyPref", MODE_PRIVATE);
             SharedPreferences.Editor editor = pref.edit();
@@ -113,7 +116,7 @@ public class MainActivity extends AppCompatActivity {
     }
 
     // Change layout based on screen rotation
-    public void onConfigurationChanged(Configuration newConfig){
+    public void onConfigurationChanged(Configuration newConfig) {
         super.onConfigurationChanged(newConfig);
         if (newConfig.orientation == Configuration.ORIENTATION_LANDSCAPE) {
             setContentView(R.layout.activity_main_rotated);
@@ -124,7 +127,7 @@ public class MainActivity extends AppCompatActivity {
             String name = pref.getString("name", "there");
             welcomeMessage.setText(getString(R.string.welcomeMessage, name));
             final VideoView videoview = findViewById(R.id.backgroundVideo);
-            Uri uri = Uri.parse("android.resource://"+getPackageName()+"/"+R.raw.test);
+            Uri uri = Uri.parse("android.resource://" + getPackageName() + "/" + R.raw.test);
             videoview.setVideoURI(uri);
             videoview.setOnCompletionListener(new MediaPlayer.OnCompletionListener() {
                 @Override
@@ -132,8 +135,8 @@ public class MainActivity extends AppCompatActivity {
                     videoview.start();
                 }
             });
-            videoview.start();}
-        else if (newConfig.orientation == Configuration.ORIENTATION_PORTRAIT){
+            videoview.start();
+        } else if (newConfig.orientation == Configuration.ORIENTATION_PORTRAIT) {
             setContentView(R.layout.activity_main);
             Toolbar myToolbar = findViewById(R.id.actionBar);
             setSupportActionBar(myToolbar);
@@ -142,7 +145,7 @@ public class MainActivity extends AppCompatActivity {
             String name = pref.getString("name", "there");
             welcomeMessage.setText(getString(R.string.welcomeMessage, name));
             final VideoView videoview = findViewById(R.id.backgroundVideo);
-            Uri uri = Uri.parse("android.resource://"+getPackageName()+"/"+R.raw.testflipped);
+            Uri uri = Uri.parse("android.resource://" + getPackageName() + "/" + R.raw.testflipped);
             videoview.setVideoURI(uri);
             videoview.setOnCompletionListener(new MediaPlayer.OnCompletionListener() {
                 @Override
@@ -150,24 +153,20 @@ public class MainActivity extends AppCompatActivity {
                     videoview.start();
                 }
             });
-            videoview.start();}
+            videoview.start();
+        }
     }
 
-    public void startQuiz (View v) {
+    public void startQuiz(View v) {
         Intent intent = new Intent(getApplicationContext(), question1.class);
         String nameString = getIntent().getStringExtra("name");
         intent.putExtra("name", nameString);
         startActivity(intent);
     }
 
-    public void startPractise (View v) {
-        Intent intent = new Intent(getApplicationContext(), PractiseActivity.class);
-        String nameString = getIntent().getStringExtra("name");
-        intent.putExtra("name", nameString);
-        startActivity(intent);
-    }
 
-    public void startLearningResources (View v) {
+
+    public void startLearningResources(View v) {
         Intent intent = new Intent(getApplicationContext(), LearningResourcesActivity.class);
         String nameString = getIntent().getStringExtra("name");
         intent.putExtra("name", nameString);

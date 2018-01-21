@@ -15,45 +15,42 @@ public class question9 extends AppCompatActivity {
     Boolean answer2 = false;
     Boolean answer3 = false;
     Boolean answer4 = false;
+    boolean hasAnswered = false;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         overridePendingTransition(R.anim.slidein, R.anim.slideout);
         setContentView(R.layout.activity_question9);
-        Boolean practiseMode = getIntent().getBooleanExtra("practise", false);
-        if (practiseMode) {
+    }
+
+    public void nextQuestion(View v) {
+        if (!hasAnswered) {
             Button nextButton = findViewById(R.id.nextButton);
-            nextButton.setText(R.string.back);
+            nextButton.setText(R.string.nextButton);
+            TextView answer1TV = findViewById(R.id.answer1);
+            answer1TV.setTextColor(getResources().getColor(R.color.correctAnswer));
+            TextView answer3TV = findViewById(R.id.answer3);
+            answer3TV.setTextColor(getResources().getColor(R.color.correctAnswer));
             TextView answer2TV = findViewById(R.id.answer2);
             answer2TV.setTextColor(getResources().getColor(R.color.correctAnswer));
             TextView answer4TV = findViewById(R.id.answer4);
             answer4TV.setTextColor(getResources().getColor(R.color.correctAnswer));
-
-        }
-    }
-
-    public void nextQuestion(View v) {
-        Boolean practiseMode = getIntent().getBooleanExtra("practise", false);
-        if (!practiseMode) {
+            hasAnswered = true;
+        } else {
             Intent intent = new Intent(getApplicationContext(), question10.class);
             int score = scoreCalc();
             intent.putExtra("score", score);
-            startActivity(intent);
-        } else {
-            Intent intent = new Intent(getApplicationContext(), PractiseActivity.class);
             startActivity(intent);
         }
     }
 
     @TargetApi(Build.VERSION_CODES.JELLY_BEAN)
     public void answer1bool(View v) {
-        Boolean practiseMode = getIntent().getBooleanExtra("practise", false);
         TextView answer1TV = findViewById(R.id.answer1);
-
-        if (!practiseMode) {
+        if (!hasAnswered) {
             if (!answer1) {
-                answer1TV.setTextColor(getResources().getColor(R.color.correctAnswer));
+                answer1TV.setTextColor(getResources().getColor(R.color.selectedColor));
                 answer1 = true;
             } else {
                 answer1TV.setTextColor(getResources().getColor(R.color.black));
@@ -64,12 +61,10 @@ public class question9 extends AppCompatActivity {
 
     @TargetApi(Build.VERSION_CODES.JELLY_BEAN)
     public void answer2bool(View v) {
-        Boolean practiseMode = getIntent().getBooleanExtra("practise", false);
         TextView answer2TV = findViewById(R.id.answer2);
-
-        if (!practiseMode) {
+        if (!hasAnswered) {
             if (!answer2) {
-                answer2TV.setTextColor(getResources().getColor(R.color.correctAnswer));
+                answer2TV.setTextColor(getResources().getColor(R.color.selectedColor));
                 answer2 = true;
             } else {
                 answer2TV.setTextColor(getResources().getColor(R.color.black));
@@ -80,12 +75,10 @@ public class question9 extends AppCompatActivity {
 
     @TargetApi(Build.VERSION_CODES.JELLY_BEAN)
     public void answer3bool(View v) {
-        Boolean practiseMode = getIntent().getBooleanExtra("practise", false);
         TextView answer3TV = findViewById(R.id.answer3);
-
-        if (!practiseMode) {
+        if (!hasAnswered) {
             if (!answer3) {
-                answer3TV.setTextColor(getResources().getColor(R.color.correctAnswer));
+                answer3TV.setTextColor(getResources().getColor(R.color.selectedColor));
                 answer3 = true;
             } else {
                 answer3TV.setTextColor(getResources().getColor(R.color.black));
@@ -96,12 +89,11 @@ public class question9 extends AppCompatActivity {
 
     @TargetApi(Build.VERSION_CODES.JELLY_BEAN)
     public void answer4bool(View v) {
-        Boolean practiseMode = getIntent().getBooleanExtra("practise", false);
         TextView answer4TV = findViewById(R.id.answer4);
 
-        if (!practiseMode) {
+        if (!hasAnswered) {
             if (!answer4) {
-                answer4TV.setTextColor(getResources().getColor(R.color.correctAnswer));
+                answer4TV.setTextColor(getResources().getColor(R.color.selectedColor));
                 answer4 = true;
             } else {
                 answer4TV.setTextColor(getResources().getColor(R.color.black));
