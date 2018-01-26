@@ -29,7 +29,7 @@
     <string name="title_activity_practise">Übungsaktivität</string>
     <string name="startPractise">Ü\nb\nu\nn\ng\ne\nn</string>
     <string name="practise_toolbar_title">Übung</string>
-    <string name="nameMissing">Bitte trage einen Namen ein, bevor du beginnst!</string>
+    <string name="nameMissing">Trage einen Namen ein, um das Quiz zu starten</string>
     <string name="q6a4">MtGox\' Besitzer</string>
     <string name="q6a2">Kraken\'s Besitzer</string>
     <string name="nextButton">Weiter</string>
@@ -70,4 +70,6 @@
     <string name="shareText">Hey!\nIch habe grade <xliff:g id="score" example="0">%s</xliff:g> Punkte in CryptoQuiz erreicht! Lade es dir jetzt von <a href="https://github.com/gereonelvers/crypto-quiz">GitHub</a> runter! \nhttps://github.com/gereonelvers/crypto-quiz</string>
     <string name="badScore">Mehr Glück beim nächsten Mal, \n<xliff:g id="name" example="Thomas">%s</xliff:g>!</string>
     <string name="shareTitle">Teile dein Ergebnis!</string>
+    <string name="answerButton">Antwort überprüfen</string>
+    <string name="test">Test</string>
 </resources>

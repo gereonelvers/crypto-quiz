@@ -8,6 +8,7 @@ import android.support.v7.app.AppCompatActivity;
 import android.view.View;
 import android.widget.Button;
 import android.widget.TextView;
+import android.widget.Toast;
 
 public class question6 extends AppCompatActivity {
 
@@ -16,6 +17,8 @@ public class question6 extends AppCompatActivity {
     Boolean answer3 = false;
     Boolean answer4 = false;
     boolean hasAnswered = false;
+    private static final int TIME_INTERVAL = 2000;
+    private long mSkipPressed;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -26,11 +29,25 @@ public class question6 extends AppCompatActivity {
 
     public void nextQuestion(View v) {
         if (!hasAnswered) {
+            if (!answer1 & !answer2 & !answer3 & !answer4){
+                if (mSkipPressed + TIME_INTERVAL > System.currentTimeMillis()) {
+                    Button nextButton = findViewById(R.id.nextButton);
+                    nextButton.setText(R.string.nextButton);
+                    TextView answer3TV = findViewById(R.id.answer3);
+                    answer3TV.setTextColor(getResources().getColor(R.color.correctAnswer));
+                    hasAnswered = true;
+                }
+                else {
+                    Toast.makeText(getBaseContext(), R.string.skipSelect, Toast.LENGTH_SHORT).show();
+                }
+                mSkipPressed = System.currentTimeMillis();}
+                else {
+
             Button nextButton = findViewById(R.id.nextButton);
             nextButton.setText(R.string.nextButton);
             TextView answer3TV = findViewById(R.id.answer3);
             answer3TV.setTextColor(getResources().getColor(R.color.correctAnswer));
-            hasAnswered = true;
+            hasAnswered = true;}
         } else {
             Intent intent = new Intent(getApplicationContext(), question7.class);
             int score = scoreCalc();

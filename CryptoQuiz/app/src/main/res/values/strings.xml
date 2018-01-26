@@ -16,7 +16,7 @@
     <!--Intro phrase [30 char max]-->
     <string name="intro2">ready to test your crypto-knowledge?</string>
     <!-- Toast message to remind user of name input [55 char max]-->
-    <string name="nameMissing">Please input a name before starting the quiz!</string>
+    <string name="nameMissing">Input name to start the quiz!</string>
 
     <!--Main menu Strings -->
     <!--//////////////////-->
@@ -48,7 +48,7 @@
     <!-- ////////////////// -->
     <string name="sources_header">Sources</string>
     <string name="sources_text">Below you can find sources to all media used inside the App</string>
-    <string name="fair_use_disclaimer">All media is used under Section 107 of the Copyright Act 1976:\nCopyright Disclaimer Under Section 107 of the Copyright Act 1976, allowance is made for "fair use" for purposes such as criticism, comment, news reporting, teaching, scholarship, and research. Fair use is a use permitted by copyright statute that might otherwise be infringing. Non-profit, educational or personal use tips the balance in favor of fair use.</string>
+    <string name="fair_use_disclaimer" translatable="false">All media is used under Section 107 of the Copyright Act 1976:\nCopyright Disclaimer Under Section 107 of the Copyright Act 1976, allowance is made for "fair use" for purposes such as criticism, comment, news reporting, teaching, scholarship, and research. Fair use is a use permitted by copyright statute that might otherwise be infringing. Non-profit, educational or personal use tips the balance in favor of fair use.</string>
     <string name="media1">Crypto currency logo by Daniel Pfeifer</string>
     <string name="media2" translatable="false">Technology Network Loop Background by ConnectingConnections</string>
     <string name="media3" translatable="false">Guy Fawkes mask by amazyble.com</string>
@@ -109,7 +109,7 @@
     <string name="q5a4" translatable="false">Ledger Nano S</string>
 
     <string name="question6Ask">Who is Charlie Lee?</string>
-    <string name="q6a1" translatable="false">CEO of Coinbase</string>
+    <string name="q6a1">CEO of Coinbase</string>
     <string name="q6a2">Owner of Kraken</string>
     <string name="q6a3">Founder of Litecoin</string>
     <string name="q6a4">Owner of MtGox</string>
@@ -118,7 +118,7 @@
     <string name="q7a1" translatable="false">Roger Ver</string>
     <string name="q7a2" translatable="false">Andreas Antonopoulos</string>
     <string name="q7a3" translatable="false">Vitalik Buterin</string>
-    <string name="q7a4">Brian Armstrong</string>
+    <string name="q7a4" translatable="false">Brian Armstrong</string>
 
     <string name="question8Ask">What is the name of the general distributed ledger that tracks all transactions of a cryptocurrency?</string>
 
@@ -135,7 +135,7 @@
     <string name="badScore">Better luck next time, \n<xliff:g id="name" example="Thomas">%s</xliff:g>!</string>
     <string name="score">You achieved <xliff:g id="score" example="0">%s</xliff:g> out of 16 points!</string>
     <string name="practise">Practice</string>
-    <string name="shareText">Hey!\n I just scored <xliff:g id="score" example="0">%s</xliff:g> points in CryptoQuiz! Download now from <a href="https://github.com/gereonelvers/crypto-quiz">GitHub</a> runter!  https://github.com/gereonelvers/crypto-quiz</string>
+    <string name="shareText">Hey!\n I just scored <xliff:g id="score" example="0">%s</xliff:g> points in CryptoQuiz! Download now from <a href="https://github.com/gereonelvers/crypto-quiz">GitHub</a>!  https://github.com/gereonelvers/crypto-quiz</string>
     <string name="shareTitle">Share your results!</string>
 
     <!-- Learning Resources-->
@@ -146,7 +146,10 @@
     <string name="resource3" translatable="false">bitcoin.org</string>
     <string name="resource4" translatable="false">reddit.com/r/CryptoCurrency</string>
     <string name="resource5" translatable="false">lightning.network</string>
-    <string name="title_activity_opening_rotated">OpeningActivityRotated</string>
+    <string name="title_activity_opening_rotated" translatable="false">OpeningActivityRotated</string>
+
+    <string name="skipInput">Input empty, press again to skip!</string>
+    <string name="skipSelect">No answer selected, press again to skip!</string>
 
 
 </resources>

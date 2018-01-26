@@ -7,11 +7,14 @@ import android.view.View;
 import android.view.WindowManager;
 import android.widget.Button;
 import android.widget.EditText;
+import android.widget.Toast;
 
 public class question8 extends AppCompatActivity {
 
     String answerInput;
     boolean hasAnswered = false;
+    private static final int TIME_INTERVAL = 2000;
+    private long mSkipPressed;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -24,6 +27,23 @@ public class question8 extends AppCompatActivity {
         if (!hasAnswered){
         EditText answer = findViewById(R.id.answerInput);
         answerInput = answer.getText().toString();
+        if(answerInput.equals("")){
+            if(mSkipPressed + TIME_INTERVAL > System.currentTimeMillis()){
+            answer.setText("Blockchain");
+            answer.setEnabled(false);
+            answer.setFocusable(false);
+            getWindow().setSoftInputMode(WindowManager.LayoutParams.SOFT_INPUT_STATE_ALWAYS_HIDDEN);
+            answer.setTextColor(getResources().getColor(R.color.correctAnswer));
+            Button nextButton = findViewById(R.id.nextButton);
+            nextButton.setText(R.string.nextButton);
+            hasAnswered = true;}
+            else{
+                Toast.makeText(getBaseContext(), R.string.skipInput, Toast.LENGTH_SHORT).show();
+            }
+            mSkipPressed = System.currentTimeMillis();
+        }
+        else {
+
         answer.setText("Blockchain");
         answer.setEnabled(false);
         answer.setFocusable(false);
@@ -31,7 +51,7 @@ public class question8 extends AppCompatActivity {
         answer.setTextColor(getResources().getColor(R.color.correctAnswer));
         Button nextButton = findViewById(R.id.nextButton);
         nextButton.setText(R.string.nextButton);
-        hasAnswered = true;}
+        hasAnswered = true;}}
 
         else {
             Intent intent = new Intent(getApplicationContext(), question9.class);

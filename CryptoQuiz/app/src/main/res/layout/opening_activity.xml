@@ -21,7 +21,8 @@
         android:layout_marginLeft="80dp"
         android:layout_marginTop="-50dp"
         android:layout_centerHorizontal="true"
-        android:src="@drawable/logo1" />
+        android:src="@drawable/logo1"
+        android:alpha="1.0"/>
 <RelativeLayout
     android:layout_below="@id/logo"
     android:layout_width="match_parent"
