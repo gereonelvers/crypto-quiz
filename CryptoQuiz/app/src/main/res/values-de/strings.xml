@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?>
+<!--<?xml version="1.0" encoding="utf-8"?>-->
 <resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
     <string name="app_name">CryptoQuiz</string>
     <string name="score">Du hast <xliff:g id="score">%s</xliff:g> von 16 Punkten erreicht!</string>
@@ -67,9 +67,11 @@
     <string name="media11">Altcoin picture von bitcoin.com</string>
     <string name="about_header">Über</string>
     <string name="practise">Üben</string>
-    <string name="shareText">Hey!\nIch habe grade <xliff:g id="score" example="0">%s</xliff:g> Punkte in CryptoQuiz erreicht! Lade es dir jetzt von <a href="https://github.com/gereonelvers/crypto-quiz">GitHub</a> runter! \nhttps://github.com/gereonelvers/crypto-quiz</string>
+    <string name="shareText">Hey!\nIch habe grade <xliff:g id="score" example="0">%s</xliff:g> Punkte in CryptoQuiz erreicht! Lade es dir jetzt von <a href="https://play.google.com/store/apps/details?id=com.gereonelvers.android.cryptoquiz">Google Play</a> runter! \nhttps://play.google.com/store/apps/details?id=com.gereonelvers.android.cryptoquiz</string>
     <string name="badScore">Mehr Glück beim nächsten Mal, \n<xliff:g id="name" example="Thomas">%s</xliff:g>!</string>
     <string name="shareTitle">Teile dein Ergebnis!</string>
     <string name="answerButton">Antwort überprüfen</string>
     <string name="test">Test</string>
+    <string name="skipInput">Leere Eingabe, drücke erneut um zu überspringen!</string>
+    <string name="skipSelect">Keine Antwort ausgewählt, drücke erneut um zu überspringen!</string>
 </resources>

@@ -135,7 +135,7 @@
     <string name="badScore">Better luck next time, \n<xliff:g id="name" example="Thomas">%s</xliff:g>!</string>
     <string name="score">You achieved <xliff:g id="score" example="0">%s</xliff:g> out of 16 points!</string>
     <string name="practise">Practice</string>
-    <string name="shareText">Hey!\n I just scored <xliff:g id="score" example="0">%s</xliff:g> points in CryptoQuiz! Download now from <a href="https://github.com/gereonelvers/crypto-quiz">GitHub</a>!  https://github.com/gereonelvers/crypto-quiz</string>
+    <string name="shareText">Hey!\n I just scored <xliff:g id="score" example="0">%s</xliff:g> points in CryptoQuiz! Download now from <a href="https://play.google.com/store/apps/details?id=com.gereonelvers.android.cryptoquiz">Google Play</a>!  https://play.google.com/store/apps/details?id=com.gereonelvers.android.cryptoquiz</string>
     <string name="shareTitle">Share your results!</string>
 
     <!-- Learning Resources-->
