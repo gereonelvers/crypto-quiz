@@ -41,12 +41,13 @@
         android:id="@+id/nameInput"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_toRightOf="@id/intro1"
-        android:layout_marginTop="21sp"
         android:layout_marginLeft="8dp"
-        android:textSize="40sp"
+        android:layout_marginTop="21sp"
+        android:layout_toRightOf="@id/intro1"
         android:hint="@string/nameHint"
-        android:singleLine="true"/>
+        android:maxLength="20"
+        android:singleLine="true"
+        android:textSize="40sp" />
 
     <TextView
         android:layout_width="wrap_content"
